@@ -13,12 +13,13 @@ const { title } = Astro.props;
 		<meta name="description" content="Astro description">
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<script src="../scripts/myscript.js"></script>
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
 	<body>
 
-		<header>
+		<header id="header">
 			<ul>
 				<li>
 					<div class="li-inicio" id="li-inicio">Inicio</div>
@@ -119,14 +120,19 @@ const { title } = Astro.props;
 			console.log(ancho.body);
 			console.log(ancho.body.clientWidth); */
 
-			miLi.addEventListener('click', ()=>{
+
+			const header = document.getElementById('header');
+			const alturaheader = header.clientHeight;
+			console.log(alturaheader);
+
+		/* 	miLi.addEventListener('click', ()=>{
 				if(li1.classList=="li1"){
 
 					li1.classList.replace('li1', 'li1-visible');
 				}else{
 					li1.classList.replace('li1-visible', 'li1');
 				}
-			})
+			}) */
 			
 		</script>
 	</body>
@@ -181,9 +187,6 @@ const { title } = Astro.props;
 		padding: 30px;
 	}
 
-	.li-visible>*{
-		
-	}
 
 	ul{
 		display: flex;
@@ -197,16 +200,16 @@ const { title } = Astro.props;
 		/* top: 100px; */
 		grid-column: 1/2;padding: 10px;
 		position: sticky;
-		top: 100px;
+		top: 73px;
 		width: 250px;
 		overflow: auto;
 		background-color: rgb(59, 15, 15);
-		height: calc(100vh - 120px);
+		height: calc(100vh - 70px);
 		
 	}
 	.main{
 		grid-column: 2/3;padding: 10px;
-		width: 60vw;
+		width: 50vw;
 		margin: 0 auto;
 		padding: 50px 5px;
 		background-color: rgb(69, 23, 80);
