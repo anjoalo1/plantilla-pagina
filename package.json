@@ -10,6 +10,11 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^3.0.7"
+    "astro": "^3.0.7",
+    "prism-themes": "^1.9.0",
+    "prismjs": "^1.29.0"
+  },
+  "devDependencies": {
+    "@types/prismjs": "^1.26.0"
   }
 }

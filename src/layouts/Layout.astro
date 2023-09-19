@@ -13,12 +13,13 @@ const { title } = Astro.props;
 		<meta name="description" content="Astro description">
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<script src="../scripts/myscript.js"></script>
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
 	<body>
 
-		<header>
+		<header id="header">
 			<ul>
 				<li>
 					<div class="li-inicio" id="li-inicio">Inicio</div>
@@ -38,10 +39,10 @@ const { title } = Astro.props;
 		</header>
 
 
-		<div>
+		<!-- <div>
 			<h1>Este es el titulo</h1>
 			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate delectus reiciendis sit odit quidem ipsam est dolor. Illum nulla sint dolorum recusandae culpa asperiores vitae iste? Corporis earum totam sequi!</p>
-		</div>
+		</div> -->
 
 		
 		
@@ -56,38 +57,13 @@ const { title } = Astro.props;
 
 				<div class="aside">
 					<p>este es el aside</p>
+					<p>aside</p>
 
-					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit magnam eveniet culpa iure esse! Amet, magnam? Saepe eligendi expedita reprehenderit accusamus, adipisci ipsa aliquid unde incidunt vero ipsam explicabo eius.</p>
-					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit magnam eveniet culpa iure esse! Amet, magnam? Saepe eligendi expedita reprehenderit accusamus, adipisci ipsa aliquid unde incidunt vero ipsam explicabo eius.</p>
-					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit magnam eveniet culpa iure esse! Amet, magnam? Saepe eligendi expedita reprehenderit accusamus, adipisci ipsa aliquid unde incidunt vero ipsam explicabo eius.</p>
-					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit magnam eveniet culpa iure esse! Amet, magnam? Saepe eligendi expedita reprehenderit accusamus, adipisci ipsa aliquid unde incidunt vero ipsam explicabo eius.</p>
-					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit magnam eveniet culpa iure esse! Amet, magnam? Saepe eligendi expedita reprehenderit accusamus, adipisci ipsa aliquid unde incidunt vero ipsam explicabo eius.</p>
-					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit magnam eveniet culpa iure esse! Amet, magnam? Saepe eligendi expedita reprehenderit accusamus, adipisci ipsa aliquid unde incidunt vero ipsam explicabo eius.</p>
-					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit magnam eveniet culpa iure esse! Amet, magnam? Saepe eligendi expedita reprehenderit accusamus, adipisci ipsa aliquid unde incidunt vero ipsam explicabo eius.</p>
-					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit magnam eveniet culpa iure esse! Amet, magnam? Saepe eligendi expedita reprehenderit accusamus, adipisci ipsa aliquid unde incidunt vero ipsam explicabo eius.</p>
-					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit magnam eveniet culpa iure esse! Amet, magnam? Saepe eligendi expedita reprehenderit accusamus, adipisci ipsa aliquid unde incidunt vero ipsam explicabo eius.</p>
-					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit magnam eveniet culpa iure esse! Amet, magnam? Saepe eligendi expedita reprehenderit accusamus, adipisci ipsa aliquid unde incidunt vero ipsam explicabo eius.</p>
-					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit magnam eveniet culpa iure esse! Amet, magnam? Saepe eligendi expedita reprehenderit accusamus, adipisci ipsa aliquid unde incidunt vero ipsam explicabo eius.</p>
-					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit magnam eveniet culpa iure esse! Amet, magnam? Saepe eligendi expedita reprehenderit accusamus, adipisci ipsa aliquid unde incidunt vero ipsam explicabo eius.</p>
-					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit magnam eveniet culpa iure esse! Amet, magnam? Saepe eligendi expedita reprehenderit accusamus, adipisci ipsa aliquid unde incidunt vero ipsam explicabo eius.</p>
-					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit magnam eveniet culpa iure esse! Amet, magnam? Saepe eligendi expedita reprehenderit accusamus, adipisci ipsa aliquid unde incidunt vero ipsam explicabo eius.</p>
-					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit magnam eveniet culpa iure esse! Amet, magnam? Saepe eligendi expedita reprehenderit accusamus, adipisci ipsa aliquid unde incidunt vero ipsam explicabo eius.</p>
 					
-
 				</div>
 
 				<div class="main">
-					<slot />
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos ipsa voluptate commodi animi, minima quia, rerum quo voluptates, eos odio magni totam quae. Velit, quia unde rerum vel id expedita.</p>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos ipsa voluptate commodi animi, minima quia, rerum quo voluptates, eos odio magni totam quae. Velit, quia unde rerum vel id expedita.</p>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos ipsa voluptate commodi animi, minima quia, rerum quo voluptates, eos odio magni totam quae. Velit, quia unde rerum vel id expedita.</p>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos ipsa voluptate commodi animi, minima quia, rerum quo voluptates, eos odio magni totam quae. Velit, quia unde rerum vel id expedita.</p>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos ipsa voluptate commodi animi, minima quia, rerum quo voluptates, eos odio magni totam quae. Velit, quia unde rerum vel id expedita.</p>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos ipsa voluptate commodi animi, minima quia, rerum quo voluptates, eos odio magni totam quae. Velit, quia unde rerum vel id expedita.</p>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos ipsa voluptate commodi animi, minima quia, rerum quo voluptates, eos odio magni totam quae. Velit, quia unde rerum vel id expedita.</p>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos ipsa voluptate commodi animi, minima quia, rerum quo voluptates, eos odio magni totam quae. Velit, quia unde rerum vel id expedita.</p>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos ipsa voluptate commodi animi, minima quia, rerum quo voluptates, eos odio magni totam quae. Velit, quia unde rerum vel id expedita.</p>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos ipsa voluptate commodi animi, minima quia, rerum quo voluptates, eos odio magni totam quae. Velit, quia unde rerum vel id expedita.</p>
+					<slot></slot>
 				</div>
 				
 
@@ -119,14 +95,19 @@ const { title } = Astro.props;
 			console.log(ancho.body);
 			console.log(ancho.body.clientWidth); */
 
-			miLi.addEventListener('click', ()=>{
+
+			const header = document.getElementById('header');
+			const alturaheader = header.clientHeight;
+			console.log(alturaheader);
+
+		/* 	miLi.addEventListener('click', ()=>{
 				if(li1.classList=="li1"){
 
 					li1.classList.replace('li1', 'li1-visible');
 				}else{
 					li1.classList.replace('li1-visible', 'li1');
 				}
-			})
+			}) */
 			
 		</script>
 	</body>
@@ -143,6 +124,14 @@ const { title } = Astro.props;
 		margin: 0;
 		box-sizing: border-box;
 		color: white;
+	}
+
+	.parrafo{
+		font-size: 1.4rem;
+	}
+
+	strong{
+		color: red;
 	}
 
 	.main-container{
@@ -181,9 +170,6 @@ const { title } = Astro.props;
 		padding: 30px;
 	}
 
-	.li-visible>*{
-		
-	}
 
 	ul{
 		display: flex;
@@ -197,19 +183,20 @@ const { title } = Astro.props;
 		/* top: 100px; */
 		grid-column: 1/2;padding: 10px;
 		position: sticky;
-		top: 100px;
+		top: 73px;
 		width: 250px;
 		overflow: auto;
 		background-color: rgb(59, 15, 15);
-		height: calc(100vh - 120px);
+		height: calc(100vh - 70px);
 		
 	}
 	.main{
 		grid-column: 2/3;padding: 10px;
-		width: 60vw;
+		width: 50vw;
 		margin: 0 auto;
 		padding: 50px 5px;
-		background-color: rgb(69, 23, 80);
+		/* background-color: rgb(69, 23, 80); */
+		background-color: transparent;
 	}
 
 	.footer{
