@@ -18,15 +18,13 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-
 		<header id="header">
-			<ul>
+			<ul class="ul-header">
 				<li>
 					<div class="li-inicio" id="li-inicio">Inicio</div>
 					<div class="li1" id="li1">
 						<div><a>hola</a></div>
-						<div><a>hola2</a></div>
-						
+						<div><a>hola2</a></div>					
 					</div>
 				</li>
 				<li>About</li>
@@ -38,47 +36,20 @@ const { title } = Astro.props;
 			</ul>
 		</header>
 
-
-		<!-- <div>
-			<h1>Este es el titulo</h1>
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate delectus reiciendis sit odit quidem ipsam est dolor. Illum nulla sint dolorum recusandae culpa asperiores vitae iste? Corporis earum totam sequi!</p>
-		</div> -->
-
-		
-		
 		<div class="main-container">
-
-		
-		
-		
-
-
-		
-
-				<div class="aside">
-					<p>este es el aside</p>
-					<p>aside</p>
-
-					
-				</div>
-
-				<div class="main">
-					<slot></slot>
-				</div>
+			<div class="aside">
+				<p>este es aside</p>
+			</div>
+			<div class="main">
 				
-
-			
-			
-
+				<slot>
+				</slot></div>
+				
 			<footer class="footer">
 				<div>
 					<p>este es el footer lo</p>
-					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut quis pariatur provident accusamus voluptatum harum, placeat quaerat qui reprehenderit hic sed natus ullam! Quia expedita eum, tempore quos laborum saepe!</p>
-
 				</div>
 			</footer>
-
-
 		</div>
 
 		<script is:inline>
@@ -120,6 +91,12 @@ const { title } = Astro.props;
 		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), rgb(var(--accent-light)) 30%, white 60%);
 	}
 
+	html {
+		font-family: system-ui, sans-serif;
+		background: #13151A;
+		/* background-size: 224px; */
+	}
+
 	body{
 		margin: 0;
 		box-sizing: border-box;
@@ -139,9 +116,10 @@ const { title } = Astro.props;
 		margin: 0 auto;
 		border: 1px solid white;
 		display: grid;
-		grid-template-columns: 250px minmax(0px, 1fr);
+		grid-template-columns: 250px auto;
+		gap: 10px;
+		/* justify-content: start; */
 	}
-
 
 	header{
 		width: auto;
@@ -160,7 +138,6 @@ const { title } = Astro.props;
 		display: none;
 	}
 
-
 	.li1-visible{
 		display: block;
 		position: absolute;
@@ -170,8 +147,7 @@ const { title } = Astro.props;
 		padding: 30px;
 	}
 
-
-	ul{
+	.ul-header{
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
@@ -180,7 +156,6 @@ const { title } = Astro.props;
 	}
 
 	.aside{
-		/* top: 100px; */
 		grid-column: 1/2;padding: 10px;
 		position: sticky;
 		top: 73px;
@@ -188,14 +163,12 @@ const { title } = Astro.props;
 		overflow: auto;
 		background-color: rgb(59, 15, 15);
 		height: calc(100vh - 70px);
-		
 	}
 	.main{
 		grid-column: 2/3;padding: 10px;
-		width: 50vw;
+		width: calc(80vw - 320px);
 		margin: 0 auto;
-		padding: 50px 5px;
-		/* background-color: rgb(69, 23, 80); */
+		padding: 50px 20px;
 		background-color: transparent;
 	}
 
@@ -220,18 +193,12 @@ const { title } = Astro.props;
 		header{
 			position: relative;
 				width: auto;
-				height: auto;
-
-				
+				height: auto;		
 		}
 
-		ul{
-			
+		.ul-header{
 			flex-direction: column;
 		}
-
-
-
 
 		.aside{
 			display: none;
@@ -241,7 +208,6 @@ const { title } = Astro.props;
 		.main{
 			width: 80vw;
 			grid-column: 1/2;
-			/* padding: 10px; */
 			margin: 0 auto;
 		}
 
@@ -253,17 +219,38 @@ const { title } = Astro.props;
 
 	}
 
-
-
-
-
-
-
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151A;
-		/* background-size: 224px; */
+	.res{
+		color: red;
+		font-weight: bold;
+		
 	}
+
+	.title-h1{
+		color: red;
+		text-align: center;
+		font-size: 2rem;
+		font-weight: bold;
+	}
+	.title-h2{
+		color: red;
+		text-align: left;
+		font-size: 1.8rem
+		font-weight: bold;
+	}
+	.title-h3{
+		color: red;
+		text-align: left;
+		font-size: 1.5rem
+		font-weight: bold;
+	}
+
+
+
+
+
+
+
+	
 	code {
 		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
 			Bitstream Vera Sans Mono, Courier New, monospace;
