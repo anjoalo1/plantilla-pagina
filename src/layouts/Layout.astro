@@ -37,13 +37,16 @@ const { title } = Astro.props;
 		</header>
 
 		<div class="main-container">
+			
 			<div class="aside">
-				<p>este es aside</p>
+				<slot name="aside"></slot>
 			</div>
+
+
 			<div class="main">
 				
-				<slot>
-				</slot></div>
+				<slot name="main"></slot>
+			</div>
 				
 			<footer class="footer">
 				<div>
@@ -161,7 +164,7 @@ const { title } = Astro.props;
 		top: 73px;
 		width: 250px;
 		overflow: auto;
-		background-color: rgb(59, 15, 15);
+		background-color: #20252C;
 		height: calc(100vh - 70px);
 	}
 	.main{

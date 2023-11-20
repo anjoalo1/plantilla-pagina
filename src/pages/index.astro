@@ -8,13 +8,17 @@ import Articlep from '../components/Articlep.astro';
 ---
 
 <Layout title="Welcome to Astro.">
-	<main>
+	<div slot="aside">
+		<p>este es el aside </p>
+	</div>
+	<main slot="main">
+
 
 		<h1>CURSO</h1>
 
 		
 		<Articlep>
-			<h1 class="title-h1">Curso SQL</h1>
+			<h1 class="title-h1">Curso [aqui nombre curso]</h1>
 		</Articlep>
 
 
