@@ -4,6 +4,7 @@ interface Props {
 }
 
 const { title } = Astro.props;
+import Navigation from '../components/Navigation.astro';
 ---
 
 <!DOCTYPE html>
@@ -44,7 +45,7 @@ const { title } = Astro.props;
 
 
 			<div class="main">
-				
+				<Navigation></Navigation>
 				<slot name="main"></slot>
 			</div>
 				
@@ -92,11 +93,12 @@ const { title } = Astro.props;
 		--accent-light: 224, 204, 250;
 		--accent-dark: 49, 10, 101;
 		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), rgb(var(--accent-light)) 30%, white 60%);
+		--color-back: #20252C;
 	}
 
 	html {
 		font-family: system-ui, sans-serif;
-		background: #13151A;
+		background: var(--color-back);
 		/* background-size: 224px; */
 	}
 
@@ -117,9 +119,9 @@ const { title } = Astro.props;
 	.main-container{
 		width: auto;
 		margin: 0 auto;
-		border: 1px solid white;
+		/* border: 1px solid white; */
 		display: grid;
-		grid-template-columns: 250px auto;
+		grid-template-columns: 250px minmax(0, 1fr);
 		gap: 10px;
 		/* justify-content: start; */
 	}
@@ -168,10 +170,10 @@ const { title } = Astro.props;
 		height: calc(100vh - 70px);
 	}
 	.main{
-		grid-column: 2/3;padding: 10px;
-		width: calc(80vw - 320px);
+		grid-column: 2/3;
+		width: 90%;
 		margin: 0 auto;
-		padding: 50px 20px;
+		padding: 20px 10px;
 		background-color: transparent;
 	}
 
@@ -190,7 +192,7 @@ const { title } = Astro.props;
 		.main-container{
 		width: auto;
 		display: grid;
-		grid-template-columns: 95vw;
+		grid-template-columns: 1fr;
 		}
 
 		header{
