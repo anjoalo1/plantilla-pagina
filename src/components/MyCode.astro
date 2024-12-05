@@ -1,33 +1,18 @@
 ---
-
-
-
-
-
 interface Props {
 	codigo: string;
     typeLan: string;
 }
-
 const { codigo, typeLan } = Astro.props;
 ---
 
-
 <div class="code-css">
     <pre class="pre-code">
-        <code  class={typeLan} data-previewers="color time" data-prismjs-copy="Copy the JavaScript snippet!">
+        <code  class={typeLan + ' match-braces rainbow-braces no-brace-hover'} data-previewers="color time" data-prismjs-copy="Copy" >
          {codigo}
-
-
         </code>
       </pre>
 </div>
-
-
-
-
-
-
 
 <style>
 
@@ -39,17 +24,10 @@ const { codigo, typeLan } = Astro.props;
         font-size: 1rem;
     }
 
-
-
     .code-css{
         min-width: none;
         max-width: 800px;
         font-size: 1rem;
     }
 
-
-    
-
-
- 
 </style>

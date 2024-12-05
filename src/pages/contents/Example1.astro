@@ -1,0 +1,53 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Articlep from '../../components/Articlep.astro';
+//import Addimagennormal from '../../components/Addimagennormal.astro';
+import { codigos } from '../codes/codigo1.astro';
+import MyCode from '../../components/MyCode.astro'
+
+
+
+
+
+
+const typelang ="line-numbers language-kotlin";
+const htmlLang = "language-html line-numbers";
+
+/* const typelang ="java"; */
+---
+
+<Layout title="Welcome to Astro.">
+	<div slot="aside">
+		<p>este es el aside </p>
+	</div>
+	<main slot="main">
+
+
+		<h1>Funccion  Greeting Preview</h1>
+
+		
+		<Articlep>
+			<h1 class="title-h1">Archivo Jet Pack Compose</h1>
+            
+            
+            <p class="parrafo">Archivo app express</p>
+            <MyCode codigo={codigos.codigo1} typeLan={typelang}></MyCode>
+		</Articlep>
+
+		<Articlep>
+			<h1 class="title-h1">Ejemplo basico con column</h1>
+            
+            
+            <p class="parrafo"></p>
+            <MyCode codigo={codigos.codigo2} typeLan={typelang}></MyCode>
+		</Articlep>
+
+	
+
+
+	
+
+	</main>
+
+	
+</Layout>
