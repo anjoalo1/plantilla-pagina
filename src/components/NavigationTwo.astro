@@ -1,0 +1,165 @@
+---
+/* const mycontainermain=document.getElementById('container-main');
+	const containerchild = document.getElementById('container-child');
+	const headermain = document.getElementById('header-main'); */
+
+   /*  headermain?.addEventListener('click', ()=>{
+        console.log("header main clickeado")
+    }) */
+
+
+/* 	interface ComponentItem {
+  title: string; // Define que la propiedad 'title' debe ser un string
+  data: string;  // Define que la propiedad 'data' debe ser un string
+}
+
+
+type ComponentList = ComponentItem[]; */ // Define un tipo para un array de ComponentItem
+
+
+  const { mi, data, dir} = Astro.props;
+
+ 
+ 
+---
+
+<div class="container-main">
+	
+		<div class="header-main">
+		<p>{mi}</p>
+			
+			<p>De Nuevo En Comunidad</p>
+			
+		</div>
+		<div class="container-child">
+			
+			{
+				data.map((datos:any, index:number)=>(
+				<div class="content-list">
+					<p><a href={`${datos}`}>{dir}</a></p>
+				</div>
+				))
+			}
+		</div>
+
+	</div>
+
+   
+
+
+ 
+<script>
+  // Encuentra todos los botones con la clase `alert` en la página.
+  const buttons = document.querySelectorAll('.header-main');
+  const containerchild = document.querySelectorAll('.container-child')
+
+  const myheadermain = document.getElementById('header-main')
+  
+
+  // Maneja los clics en cada botón.
+  buttons.forEach((header_main) => {
+    header_main.addEventListener('click', (e) => {
+      //console.log("div header-main", header_main)
+	  if(header_main.nextElementSibling?.classList.contains('container-child')){
+		header_main.nextElementSibling?.classList.replace('container-child', 'container-child-visible')
+	  }else{
+		header_main.nextElementSibling?.classList.replace('container-child-visible', 'container-child')
+	  }
+      //console.log("parent element", parentElement?.childNodes[3])    
+    });
+  });
+</script>
+
+
+	
+
+	
+
+      
+
+
+
+    <style>
+
+	.header-main:nth-child(1){
+		padding: 10px 15px;
+		font-family: "Inter","Inter Prevent Layout Shift",system-ui,sans-serif;
+	}
+
+	.header-main>p:nth-child(1){
+		margin: 0;
+	}
+
+	.header-main>p:nth-child(2){
+		color: white;
+		margin-top: 0;
+	}
+
+	.container-main{
+		border-radius: 15px;
+		width: 330px;
+		margin-left: 20px;
+		color: #09f;
+		/* padding: 10px; */
+		/* height: 600px; */
+		margin: 0 auto 10px auto;
+	/* 	bottom: 200px; */
+
+		padding: 10px 0 0 0;
+		background-color: #0f1a2d;
+	}
+
+	
+
+	.container-child{
+		font-family: "Inter","Inter Prevent Layout Shift",system-ui,sans-serif;
+		color: #09f;
+		font-weight: bold;
+		text-transform: uppercase;
+		display: none;
+		/* background-color: #101422;
+		background-color: #101b2c;
+		background-color: #111c2d; */
+		background-color: #152640;
+	}
+
+	.container-child-visible{
+		font-family: "Inter","Inter Prevent Layout Shift",system-ui,sans-serif;
+		color: #09f;
+		font-weight: bold;
+		text-transform: capitalize;
+		display: block;
+		/* background-color: #101422;
+		background-color: #101b2c;
+		background-color: #111c2d; */
+		/* background-color: #0d1828; */
+		
+		padding: 0px;
+		background-color: #152640;
+		background-color: #111c2d; */
+		background-color: #152640;
+		border-bottom-left-radius: 15px;
+		border-bottom-right-radius: 15px;
+	}
+
+
+
+	.content-list{
+		padding: 0;
+		cursor: pointer;
+		padding-left: 10px;
+		margin: 0;
+	}
+
+	.content-list>p{
+		margin: 0;
+		padding: 5px 0;
+	}
+
+
+	.content-list:hover{
+		background-color: rgb(72, 72, 72);
+	}
+
+
+</style>

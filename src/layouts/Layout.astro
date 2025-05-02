@@ -5,6 +5,12 @@ interface Props {
 
 const { title } = Astro.props;
 import Navigation from '../components/Navigation.astro';
+
+
+import { AddressNavigation } from '../pages/codes/navigation.astro';
+import NavigationTwo from '../components/NavigationTwo.astro';
+
+const lista = AddressNavigation
 ---
 
 <!DOCTYPE html>
@@ -40,7 +46,12 @@ import Navigation from '../components/Navigation.astro';
 		<div class="main-container">
 			
 			<div class="aside">
-				<slot name="aside"></slot>
+				<!-- <slot name="aside"></slot> -->
+				 {
+			lista.map((dato, index)=>(
+				<NavigationTwo mi={dato.title} data={dato.data} dir={dato.dir}></NavigationTwo>
+				))
+			}
 			</div>
 
 

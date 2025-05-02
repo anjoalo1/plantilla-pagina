@@ -4,14 +4,24 @@ import Card from '../components/Card.astro';
 import Myimagen from '../components/Myimagen.astro';
 import Articlep from '../components/Articlep.astro';
 import Addimagen from '../components/Addimagen.astro';
+import { AddressNavigation } from './codes/navigation.astro';
+import NavigationTwo from '../components/NavigationTwo.astro';
+
+const lista = AddressNavigation
 
 /* const typelang ="java"; */
 ---
 
 <Layout title="Welcome to Astro.">
-	<div slot="aside">
-		<p>este es el aside </p>
-	</div>
+	<!-- <div slot="aside">
+		{
+			lista.map((dato, index)=>(
+				<NavigationTwo mi={dato.title} data={dato.data}></NavigationTwo>
+				))
+			}
+
+			
+	</div> -->
 	<main slot="main">
 
 		<h1>TITLE CURSO</h1>
